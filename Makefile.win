@@ -25,7 +25,7 @@ $(DEMO):
 	$(CL65) -t apple2enh --start-addr $(ADDRDEMO) -l$(DEMO).lst -m$(DEMO).map -Wl -D__STACKSIZE__=0 $(DEMO).s
 	java -jar $(AC) -d $(PGM).dsk $(DEMO)
 	java -jar $(AC) -cc65 $(PGM).dsk $(DEMO) BIN < $(DEMO)
-#	rm -f $(DEMO)
+	rm -f $(DEMO)
 	rm -f $(DEMO).o
 
 $(PGM):
@@ -33,7 +33,7 @@ $(PGM):
 	$(CL65) -t apple2enh --start-addr $(ADDR) -l$(PGM).lst -m$(PGM).map -Wl -D__STACKSIZE__=0  $(PGM).s
 	java -jar $(AC) -d $(PGM).dsk $(PGM)
 	java -jar $(AC) -cc65 $(PGM).dsk $(PGM) BIN < $(PGM)
-#	rm -f $(PGM)
+	rm -f $(PGM)
 	rm -f $(PGM).o
 #	osascript V2Make.scpt $(PROJECT_DIR) $(DEMO) $(PGM)
 
