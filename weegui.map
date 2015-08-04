@@ -1,0 +1,60 @@
+Modules list:
+-------------
+weegui.o:
+    CODE              Offs=000000  Size=001A0C  Align=00001  Fill=0000
+/src/cc65/lib/apple2enh.lib(exehdr.o):
+    EXEHDR            Offs=000000  Size=000004  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+EXEHDR                000000  000003  000004  00001
+CODE                  007B00  00950B  001A0C  00001
+
+
+Exports list by name:
+---------------------
+__EXEHDR__                000001 REA    __HIMEM__                 009600 REA    
+__LCADDR__                00D400 REA    __LCSIZE__                000C00 REA    
+__LOADADDR__              007B00 REA    __LOADSIZE__              001A0C REA    
+__MOVE_LAST__             000000 RLA    __MOVE_START__            000000 RLA    
+__STARTUP_RUN__           007B00 RLA    __ZPSAVE_RUN__            00950C RLA    
+
+
+
+Exports list by value:
+----------------------
+__MOVE_START__            000000 RLA    __MOVE_LAST__             000000 RLA    
+__EXEHDR__                000001 REA    __LCSIZE__                000C00 REA    
+__LOADSIZE__              001A0C REA    __STARTUP_RUN__           007B00 RLA    
+__LOADADDR__              007B00 REA    __ZPSAVE_RUN__            00950C RLA    
+__HIMEM__                 009600 REA    __LCADDR__                00D400 REA    
+
+
+
+Imports list:
+-------------
+__EXEHDR__ (exehdr.o):
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(7)
+__HIMEM__ ([linker generated]):
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(19)
+__LCADDR__ ([linker generated]):
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(21)
+__LCSIZE__ ([linker generated]):
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(21)
+__LOADADDR__ ([linker generated]):
+    exehdr.o                  apple2/exehdr.s(9)
+__LOADSIZE__ ([linker generated]):
+    exehdr.o                  apple2/exehdr.s(9)
+__MOVE_LAST__ ([linker generated]):
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(14)
+__MOVE_START__ ([linker generated]):
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(14)
+__STARTUP_RUN__ ([linker generated]):
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(13)
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(12)
+__ZPSAVE_RUN__ ([linker generated]):
+    [linker generated]        /src/cc65/cfg/apple2enh.cfg(13)
+

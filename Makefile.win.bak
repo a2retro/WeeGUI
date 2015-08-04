@@ -22,7 +22,7 @@ all: $(DEMO) $(PGM)
 
 $(DEMO):
 #	@PATH=$(PATH):/usr/local/bin; 
-	$(CL65) -t apple2enh --start-addr $(ADDRDEMO) -l$(DEMO).lst -m$(DEMO).map -Wl -D__STACKSIZE__=0 $(DEMO).s
+	$(CL65) -t apple2enh --start-addr $(ADDRDEMO) -l$(DEMO).lst -m$(DEMO).map  $(DEMO).s
 	java -jar $(AC) -d $(PGM).dsk $(DEMO)
 	java -jar $(AC) -cc65 $(PGM).dsk $(DEMO) BIN < $(DEMO)
 #	rm -f $(DEMO)
@@ -30,7 +30,7 @@ $(DEMO):
 
 $(PGM):
 #	@PATH=$(PATH):/usr/local/bin; 
-	$(CL65) -t apple2enh --start-addr $(ADDR) -l$(PGM).lst -m$(PGM).map -Wl -D__STACKSIZE__=0  $(PGM).s
+	$(CL65) -t apple2enh --start-addr $(ADDR) -l$(PGM).lst -m$(PGM).map  $(PGM).s
 	java -jar $(AC) -d $(PGM).dsk $(PGM)
 	java -jar $(AC) -cc65 $(PGM).dsk $(PGM) BIN < $(PGM)
 #	rm -f $(PGM)
